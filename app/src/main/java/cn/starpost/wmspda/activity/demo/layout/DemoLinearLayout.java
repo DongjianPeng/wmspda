@@ -8,6 +8,10 @@ import android.widget.LinearLayout;
 import cn.starpost.wmspda.R;
 import cn.starpost.wmspda.activity.common.BaseActivity;
 
+/**
+ * 线性布局，这个布局会把包含在内的所有控件竖向或横向排列<br>
+ *     次布局支持设定layout_weight权重来实按比例指定控件大小功能
+ */
 public class DemoLinearLayout extends BaseActivity {
     private LinearLayout layout = null;
 

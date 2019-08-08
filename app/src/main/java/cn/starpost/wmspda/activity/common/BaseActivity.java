@@ -3,6 +3,7 @@ package cn.starpost.wmspda.activity.common;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -28,6 +29,11 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         Log.d(TAG, "onCreate: ");
         super.onCreate(savedInstanceState);
+        ActionBar supportActionBar = getSupportActionBar();
+        if (supportActionBar != null) {
+            //隐藏标题栏
+            supportActionBar.hide();
+        }
     }
 
     /**

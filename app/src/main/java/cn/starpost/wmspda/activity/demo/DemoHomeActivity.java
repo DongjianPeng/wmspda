@@ -9,7 +9,10 @@ import android.view.View;
 import cn.starpost.wmspda.R;
 import cn.starpost.wmspda.activity.common.BaseActivity;
 import cn.starpost.wmspda.activity.common.DialogActivity;
+import cn.starpost.wmspda.activity.demo.layout.DemoFrameLayout;
 import cn.starpost.wmspda.activity.demo.layout.DemoLinearLayout;
+import cn.starpost.wmspda.activity.demo.layout.DemoPercentLayout;
+import cn.starpost.wmspda.activity.demo.layout.DemoRelativeLayout;
 
 public class DemoHomeActivity extends BaseActivity {
 
@@ -24,6 +27,9 @@ public class DemoHomeActivity extends BaseActivity {
 
         //layout
         findViewById(R.id.bt_demo_home_show_linear_layout).setOnClickListener(this);
+        findViewById(R.id.bt_demo_home_show_relative_layout).setOnClickListener(this);
+        findViewById(R.id.bt_demo_home_show_frame_layout).setOnClickListener(this);
+        findViewById(R.id.bt_demo_home_show_percent_layout).setOnClickListener(this);
 
     }
 
@@ -68,6 +74,18 @@ public class DemoHomeActivity extends BaseActivity {
             break;
             case R.id.bt_demo_home_show_linear_layout: {
                 openNewActivity(DemoLinearLayout.class);
+            }
+            break;
+            case R.id.bt_demo_home_show_relative_layout: {
+                openNewActivity(DemoRelativeLayout.class);
+            }
+            break;
+            case R.id.bt_demo_home_show_frame_layout: {
+                openNewActivity(DemoFrameLayout.class);
+            }
+            break;
+            case R.id.bt_demo_home_show_percent_layout: {
+                openNewActivity(DemoPercentLayout.class);
             }
             break;
             default:

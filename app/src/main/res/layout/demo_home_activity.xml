@@ -32,4 +32,25 @@
         android:text="Show Linear Layout"
         android:textAllCaps="false" />
 
+    <Button
+        android:id="@+id/bt_demo_home_show_relative_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Relative Layout"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/bt_demo_home_show_frame_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Frame Layout"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/bt_demo_home_show_percent_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Percent Layout"
+        android:textAllCaps="false" />
+
 </LinearLayout>

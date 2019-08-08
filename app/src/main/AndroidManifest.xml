@@ -22,7 +22,7 @@
         </activity>
         <activity
             android:name=".activity.common.DialogActivity"
-            android:theme="@style/Theme.AppCompat.Dialog"></activity>
+            android:theme="@style/Theme.AppCompat.Dialog" />
 
         <!--Demo-->
         <activity
@@ -33,7 +33,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.demo.layout.DemoLinearLayout"></activity>
+        <activity android:name=".activity.demo.layout.DemoLinearLayout" />
+        <activity android:name=".activity.demo.layout.DemoRelativeLayout" />
+        <activity android:name=".activity.demo.layout.DemoFrameLayout" />
+        <activity android:name=".activity.demo.layout.DemoPercentLayout" />
     </application>
 
 </manifest>
