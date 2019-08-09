@@ -16,6 +16,7 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
     protected final Intent currentIntent = getIntent();
     protected Intent currentIntentResult = null;
 
+
     public BaseActivity() {
         Log.d(TAG, "Constructor");
     }
@@ -34,6 +35,15 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
             //隐藏标题栏
             supportActionBar.hide();
         }
+        bindWidgetAndEvent(savedInstanceState);
+    }
+
+    /**
+     * 绑定控件和绑定控件对应事件
+     *
+     * @param savedInstanceState
+     */
+    protected void bindWidgetAndEvent(Bundle savedInstanceState) {
     }
 
     /**

@@ -3,6 +3,7 @@
     android:id="@+id/ll_demo_layout_linear_id"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/navigatorTextColor"
     android:orientation="vertical">
 
     <Button

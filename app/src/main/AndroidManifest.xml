@@ -9,27 +9,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".activity.demo.fragment.DemoFragmentHome"></activity>
+        <activity android:name=".activity.demo.listview.DemoRecyclerView" />
         <activity
             android:name=".activity.home.HomeActivity"
             android:launchMode="singleTask">
-            <!--<intent-filter>-->
-            <!--<action android:name="android.intent.action.MAIN" />-->
-            <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
-        </activity>
-        <activity android:name=".activity.setting.about.AboutActivity">
 
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
+        <activity android:name=".activity.setting.about.AboutActivity" />
         <activity
             android:name=".activity.common.DialogActivity"
-            android:theme="@style/Theme.AppCompat.Dialog" />
-
-        <!--Demo-->
+            android:theme="@style/Theme.AppCompat.Dialog" /> <!-- Demo -->
         <activity
             android:name=".activity.demo.DemoHomeActivity"
             android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -37,6 +37,8 @@
         <activity android:name=".activity.demo.layout.DemoRelativeLayout" />
         <activity android:name=".activity.demo.layout.DemoFrameLayout" />
         <activity android:name=".activity.demo.layout.DemoPercentLayout" />
+        <activity android:name=".activity.demo.listview.DemoListView" />
+        <activity android:name=".activity.demo.home.DemoHomePage" />
     </application>
 
 </manifest>

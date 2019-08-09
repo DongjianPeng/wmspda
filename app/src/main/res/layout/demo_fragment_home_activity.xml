@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/fg_demo_content"
+        android:name="cn.starpost.wmspda.activity.demo.fragment.DemoFragmentContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></fragment>
+
+    <fragment
+        android:id="@+id/fg_demo_bottom"
+        android:name="cn.starpost.wmspda.activity.demo.fragment.DemoFragmentBottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"></fragment>
+
+
+</RelativeLayout>

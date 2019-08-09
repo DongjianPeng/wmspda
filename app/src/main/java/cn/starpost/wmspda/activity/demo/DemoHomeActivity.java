@@ -5,21 +5,28 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
+import android.widget.Button;
 
 import cn.starpost.wmspda.R;
 import cn.starpost.wmspda.activity.common.BaseActivity;
 import cn.starpost.wmspda.activity.common.DialogActivity;
+import cn.starpost.wmspda.activity.demo.fragment.DemoFragmentHome;
+import cn.starpost.wmspda.activity.demo.home.DemoHomePage;
 import cn.starpost.wmspda.activity.demo.layout.DemoFrameLayout;
 import cn.starpost.wmspda.activity.demo.layout.DemoLinearLayout;
 import cn.starpost.wmspda.activity.demo.layout.DemoPercentLayout;
 import cn.starpost.wmspda.activity.demo.layout.DemoRelativeLayout;
+import cn.starpost.wmspda.activity.demo.listview.DemoListView;
 
 public class DemoHomeActivity extends BaseActivity {
+
+    private Button bt_demo_home_show_alert_dialog;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.demo_home_activity);
+
         findViewById(R.id.bt_demo_home_show_dialog).setOnClickListener(this);
         findViewById(R.id.bt_demo_home_show_alert_dialog).setOnClickListener(this);
         findViewById(R.id.bt_demo_home_show_pro_dialog).setOnClickListener(this);
@@ -30,6 +37,10 @@ public class DemoHomeActivity extends BaseActivity {
         findViewById(R.id.bt_demo_home_show_relative_layout).setOnClickListener(this);
         findViewById(R.id.bt_demo_home_show_frame_layout).setOnClickListener(this);
         findViewById(R.id.bt_demo_home_show_percent_layout).setOnClickListener(this);
+        findViewById(R.id.bt_demo_home_show_list_view).setOnClickListener(this);
+        findViewById(R.id.bt_demo_home_show_fragment).setOnClickListener(this);
+        findViewById(R.id.bt_demo_home_show_home_page).setOnClickListener(this);
+
 
     }
 
@@ -86,6 +97,18 @@ public class DemoHomeActivity extends BaseActivity {
             break;
             case R.id.bt_demo_home_show_percent_layout: {
                 openNewActivity(DemoPercentLayout.class);
+            }
+            break;
+            case R.id.bt_demo_home_show_list_view: {
+                openNewActivity(DemoListView.class);
+            }
+            break;
+            case R.id.bt_demo_home_show_fragment: {
+                openNewActivity(DemoFragmentHome.class);
+            }
+            break;
+            case R.id.bt_demo_home_show_home_page: {
+                openNewActivity(DemoHomePage.class);
             }
             break;
             default:

@@ -4,53 +4,90 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/bt_demo_home_show_dialog"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Show Dialog"
-        android:textAllCaps="false" />
+    <cn.starpost.wmspda.activity.common.NavigatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></cn.starpost.wmspda.activity.common.NavigatorLayout>
 
-    <Button
-        android:id="@+id/bt_demo_home_show_alert_dialog"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Show Alert Dialog"
-        android:textAllCaps="false" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/bt_demo_home_show_pro_dialog"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Show Alert Dialog"
-        android:textAllCaps="false" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/bt_demo_home_show_linear_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Show Linear Layout"
-        android:textAllCaps="false" />
+            <Button
+                android:id="@+id/bt_demo_home_show_dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Show Dialog"
+                android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/bt_demo_home_show_relative_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Show Relative Layout"
-        android:textAllCaps="false" />
+            <Button
+                android:id="@+id/bt_demo_home_show_alert_dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Show Alert Dialog"
+                android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/bt_demo_home_show_frame_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Show Frame Layout"
-        android:textAllCaps="false" />
+            <Button
+                android:id="@+id/bt_demo_home_show_pro_dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Show Alert Dialog"
+                android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/bt_demo_home_show_percent_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Show Percent Layout"
-        android:textAllCaps="false" />
+            <Button
+                android:id="@+id/bt_demo_home_show_linear_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Show Linear Layout"
+                android:textAllCaps="false" />
 
+            <Button
+                android:id="@+id/bt_demo_home_show_relative_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Show Relative Layout"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/bt_demo_home_show_frame_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Show Frame Layout"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/bt_demo_home_show_percent_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Show Percent Layout"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/bt_demo_home_show_list_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Show List View"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/bt_demo_home_show_fragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Show Fragment"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/bt_demo_home_show_home_page"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Show Home Page"
+                android:textAllCaps="false" />
+
+
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

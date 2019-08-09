@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/me_bottom_inbound"
+        android:icon="@mipmap/rukuguanli_gray"
+        android:title="@string/app_name"></item>
+
+    <item
+        android:id="@+id/me_bottom_outbound"
+        android:icon="@mipmap/chukuguanli_gray"
+        android:title="@string/app_name"></item>
+
+    <item
+        android:id="@+id/me_bottom_manager"
+        android:icon="@mipmap/cangkuguanli_gray"
+        android:title="@string/app_name"></item>
+</menu>
