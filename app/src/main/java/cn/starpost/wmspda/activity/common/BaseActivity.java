@@ -1,15 +1,20 @@
 package cn.starpost.wmspda.activity.common;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Toast;
 
-public class BaseActivity extends AppCompatActivity implements View.OnClickListener {
+import cn.starpost.wmspda.activity.home.HomeActivity;
+import cn.starpost.wmspda.service.app.ActivityLifeManager;
+
+public abstract class BaseActivity extends AppCompatActivity implements View.OnClickListener {
     protected final String TAG = getClass().getName();
 
     protected final BaseActivity currentContext = this;
@@ -30,13 +35,28 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         Log.d(TAG, "onCreate: ");
         super.onCreate(savedInstanceState);
+        ActivityLifeManager.push(this);
+        actionBarHide();
+        //强制竖屏
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+    }
+
+    protected void actionBarHide() {
         ActionBar supportActionBar = getSupportActionBar();
         if (supportActionBar != null) {
             //隐藏标题栏
             supportActionBar.hide();
         }
-        bindWidgetAndEvent(savedInstanceState);
     }
+
+    protected void actionBarShow() {
+        ActionBar supportActionBar = getSupportActionBar();
+        if (supportActionBar != null) {
+            //隐藏标题栏
+            supportActionBar.show();
+        }
+    }
+
 
     /**
      * 绑定控件和绑定控件对应事件
@@ -93,6 +113,7 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
         super.onDestroy();
     }
 
+
     /**
      * Activity由停止状态变为运行状态之前调用，调用此方法后活动变为运行状态
      */
@@ -104,7 +125,17 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
+        if (getClass().getName().equals(HomeActivity.class.getName())) {
+            toastShow("若想退出此应用请在设置界面下点击'退出应用'按钮");
+        } else {
+            super.onBackPressed();
+        }
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        Log.d(TAG, "onKeyDown: keyCode：" + keyCode + "keyCode:" + event.getKeyCode());
+        return super.onKeyDown(keyCode, event);
     }
 
     @Override

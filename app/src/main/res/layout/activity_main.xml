@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/bt_ok"
+    <FrameLayout
+        android:id="@+id/fl_home_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp"></FrameLayout>
+
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bnv_home_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="ok"
-        android:textAllCaps="false" />
-    
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@android:color/white"
+        app:menu="@menu/bottom_tab" />
 
-
-</LinearLayout>
+</RelativeLayout>

@@ -22,7 +22,8 @@
         android:gravity="center"
         android:maxLines="1"
         android:text="@string/app_name"
-        android:textColor="@color/navigatorTextColor" />
+        android:textColor="@color/navigatorTextColor"
+        android:textSize="24dp" />
 
     <ImageButton
         android:id="@+id/bt_navigator_setting"

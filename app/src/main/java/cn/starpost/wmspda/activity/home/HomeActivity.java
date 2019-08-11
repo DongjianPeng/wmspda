@@ -1,52 +1,72 @@
 package cn.starpost.wmspda.activity.home;
 
 import android.os.Bundle;
-import android.util.Log;
-import android.view.Menu;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.Fragment;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 
 import cn.starpost.wmspda.R;
 import cn.starpost.wmspda.activity.common.BaseActivity;
-import cn.starpost.wmspda.activity.common.DialogActivity;
-import cn.starpost.wmspda.activity.setting.about.AboutActivity;
+import cn.starpost.wmspda.activity.home.subset.HomeInboundFragment;
+import cn.starpost.wmspda.activity.home.subset.HomeOutboundFragment;
+import cn.starpost.wmspda.activity.home.subset.HomeWarehouseManagerFragment;
 
+/**
+ * 主界面
+ */
 public class HomeActivity extends BaseActivity {
 
+    private BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button btnOk = findViewById(R.id.bt_ok);
-        btnOk.setOnClickListener(new View.OnClickListener() {
+
+
+        bindWidgetAndEvent(savedInstanceState);
+        replaceFragment(new HomeInboundFragment());
+
+    }
+
+    @Override
+    protected void bindWidgetAndEvent(Bundle savedInstanceState) {
+        bottomNavigationView = findViewById(R.id.bnv_home_view);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public void onClick(View view) {
-                Log.d(TAG, "onClick: ");
-                toastShow("click");
-                AboutActivity.actionStart(currentContext);
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
+                switch (menuItem.getItemId()) {
+                    case R.id.me_bottom_inbound: {
+                        replaceFragment(new HomeInboundFragment());
+                    }
+                    break;
+                    case R.id.me_bottom_outbound: {
+                        replaceFragment(new HomeOutboundFragment());
+                    }
+                    break;
+                    case R.id.me_bottom_manager: {
+                        replaceFragment(new HomeWarehouseManagerFragment());
+                    }
+                    break;
+                    default:
+                        break;
+                }
+
+                return true;
             }
         });
+
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.setting, menu);
-        return true;
+    private void replaceFragment(Fragment fragment) {
+        getSupportFragmentManager()
+                .beginTransaction()
+//                .setCustomAnimations(R.anim.slide_right_in, R.anim.slide_left_out, R.anim.slide_left_in, R.anim.slide_right_out)
+                .replace(R.id.fl_home_fragment, fragment)
+                .commit();
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int itemId = item.getItemId();
-        switch (itemId) {
-            case R.id.me_about: {
-                openNewActivity(AboutActivity.class);
-            }
-            break;
-            default:
-                break;
-        }
-        return super.onOptionsItemSelected(item);
-    }
 }
+

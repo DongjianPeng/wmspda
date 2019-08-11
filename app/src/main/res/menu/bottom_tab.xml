@@ -4,15 +4,15 @@
     <item
         android:id="@+id/me_bottom_inbound"
         android:icon="@mipmap/rukuguanli_gray"
-        android:title="@string/app_name"></item>
+        android:title="入库"></item>
 
     <item
         android:id="@+id/me_bottom_outbound"
         android:icon="@mipmap/chukuguanli_gray"
-        android:title="@string/app_name"></item>
+        android:title="出库"></item>
 
     <item
         android:id="@+id/me_bottom_manager"
         android:icon="@mipmap/cangkuguanli_gray"
-        android:title="@string/app_name"></item>
+        android:title="仓库管理"></item>
 </menu>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <cn.starpost.wmspda.activity.common.NavigatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></cn.starpost.wmspda.activity.common.NavigatorLayout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@color/navigatorBackgroundColor"
+                    android:drawableLeft="@mipmap/shouhuo_white"
+                    android:paddingLeft="15dp"
+                    android:text="移库"
+                    android:textColor="@color/navigatorTextColor" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@color/navigatorBackgroundColor"
+                    android:drawableLeft="@mipmap/celiangleixing_white"
+                    android:paddingLeft="15dp"
+                    android:text="盘点"
+                    android:textColor="@color/navigatorTextColor" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>
