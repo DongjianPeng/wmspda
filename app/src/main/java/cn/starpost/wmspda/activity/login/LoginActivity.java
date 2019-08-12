@@ -13,6 +13,7 @@ import cn.starpost.wmspda.activity.common.BaseActivity;
 import cn.starpost.wmspda.config.AppConfig;
 import cn.starpost.wmspda.util.http.HTTPUtil;
 import cn.starpost.wmspda.util.http.HttpCallBackListener;
+import cn.starpost.wmspda.util.http.HttpResponse;
 import cn.starpost.wmspda.util.widget.RegexMode;
 import cn.starpost.wmspda.util.widget.WidgetContentUtil;
 
@@ -79,8 +80,8 @@ public class LoginActivity extends BaseActivity {
 
                 new HTTPUtil(new HttpCallBackListener() {
                     @Override
-                    public void httpCallBack() {
-                        
+                    public void httpCallBack(HttpResponse response) {
+
                     }
                 }).doPost(AppConfig.wmsUrl + "v2/pda/check-login", "ddd");
             }

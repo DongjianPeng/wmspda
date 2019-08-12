@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/me_profile"
-        android:title="Profile" />
-
-
+        android:id="@+id/me_setting_1"
+        android:icon="@mipmap/settings_white"
+        android:title="Setting" />
     <item
-        android:id="@+id/me_check_update"
-        android:title="Check Update" />
-
+        android:id="@+id/me_setting_2"
+        android:icon="@mipmap/settings_white"
+        android:title="Setting" />
     <item
-        android:id="@+id/me_about"
-        android:title="About" />
-
+        android:id="@+id/me_setting_3"
+        android:icon="@mipmap/settings_white"
+        android:title="Setting" />
     <item
-        android:id="@+id/me_switch_warehouse"
-        android:title="Switch Organization &amp; Warehouse" />
-
+        android:id="@+id/me_setting_4"
+        android:icon="@mipmap/settings_white"
+        android:title="Setting" />
     <item
-        android:id="@+id/me_login_out"
-        android:title="Login Out" />
+        android:id="@+id/me_setting_5"
+        android:icon="@mipmap/settings_white"
+        android:title="Setting" />
 </menu>

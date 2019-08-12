@@ -86,7 +86,7 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
         Log.d(TAG, "onResume: ");
         super.onResume();
         if (getClass().getName().equals(HomeActivity.class.getName())) {
-            LoginService.checkLogin(this);
+//            LoginService.checkLogin(this);
         }
     }
 

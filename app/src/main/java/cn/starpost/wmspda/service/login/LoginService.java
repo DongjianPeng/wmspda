@@ -12,6 +12,6 @@ public class LoginService {
     public static boolean checkLogin(BaseActivity activity) {
 
         activity.openNewActivity(LoginActivity.class);
-        return false;
+        return true;
     }
 }

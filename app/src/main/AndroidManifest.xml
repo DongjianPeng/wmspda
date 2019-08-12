@@ -43,6 +43,7 @@
         <activity android:name=".activity.inbound.QcActivity" />
         <activity android:name=".activity.inbound.MeasureActivity" />
         <activity android:name=".activity.inbound.ArrivalActivity" />
+        <activity android:name=".activity.setting.SettingActivity" />
     </application>
 
 </manifest>

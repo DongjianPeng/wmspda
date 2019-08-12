@@ -19,6 +19,11 @@ public class HomeActivity extends BaseActivity {
 
     private BottomNavigationView bottomNavigationView;
 
+    private Fragment homeInboundFragment = new HomeInboundFragment();
+    private Fragment homeOutboundFragment = new HomeOutboundFragment();
+    private Fragment homeWarehouseManagerFragment = new HomeWarehouseManagerFragment();
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +31,7 @@ public class HomeActivity extends BaseActivity {
 
 
         bindWidgetAndEvent(savedInstanceState);
-        replaceFragment(new HomeInboundFragment());
+        replaceFragment(homeInboundFragment);
 
     }
 
@@ -39,15 +44,15 @@ public class HomeActivity extends BaseActivity {
 
                 switch (menuItem.getItemId()) {
                     case R.id.me_bottom_inbound: {
-                        replaceFragment(new HomeInboundFragment());
+                        replaceFragment(homeInboundFragment);
                     }
                     break;
                     case R.id.me_bottom_outbound: {
-                        replaceFragment(new HomeOutboundFragment());
+                        replaceFragment(homeOutboundFragment);
                     }
                     break;
                     case R.id.me_bottom_manager: {
-                        replaceFragment(new HomeWarehouseManagerFragment());
+                        replaceFragment(homeWarehouseManagerFragment);
                     }
                     break;
                     default:
