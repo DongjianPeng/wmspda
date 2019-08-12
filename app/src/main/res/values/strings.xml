@@ -1,3 +1,40 @@
 <resources>
+    <!--App name-->
     <string name="app_name">仓库终端</string>
+
+    <!--Interface name-->
+    <string name="HomeActivity"></string>
+    <string name="ArrivalActivity">到货</string>
+    <string name="MeasureActivity">补货测量</string>
+    <string name="QcActivity">验收测量</string>
+    <string name="StockInActivity">上架</string>
+
+    <!--Common Operation tips-->
+    <string name="ok">好的</string>
+    <string name="submit">提交</string>
+    <string name="save">保存</string>
+    <string name="cancel">取消</string>
+    <string name="done">完成</string>
+    <string name="success">成功</string>
+    <string name="fail">失败</string>
+    <string name="systemError">系统错误</string>
+    <string name="apiError">API请求错误</string>
+    <string name="add">添加</string>
+    <string name="choose">选择</string>
+    <string name="delete">删除</string>
+    <string name="edit">编辑</string>
+    <string name="upload">上传</string>
+    <string name="uploadFile">上传文件</string>
+    <string name="uploadPhoto">上传图片</string>
+
+    <!--Common Project tips-->
+    <string name="id">ID</string>
+    <string name="orderId">订单号</string>
+    <string name="taskId">任务编号</string>
+    <string name="cartonNumber">箱号</string>
+    <string name="customerCartonNumber">客户箱号</string>
+    <string name="customerName">客户名称</string>
+    <string name="warehouseName">仓库名称</string>
+
+    <!-- Other tips-->
 </resources>

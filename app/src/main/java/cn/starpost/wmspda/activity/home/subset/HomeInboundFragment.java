@@ -13,7 +13,7 @@ import cn.starpost.wmspda.activity.inbound.ArrivalActivity;
 import cn.starpost.wmspda.activity.inbound.MeasureActivity;
 import cn.starpost.wmspda.activity.inbound.QcActivity;
 import cn.starpost.wmspda.activity.inbound.StockInActivity;
-import cn.starpost.wmspda.util.ActivityBaseOperationUtil;
+import cn.starpost.wmspda.util.AppBaseOperationUtil;
 
 public class HomeInboundFragment extends Fragment {
     @Nullable
@@ -21,10 +21,10 @@ public class HomeInboundFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.home_inbound_fragment, container, false);
 
-        ActivityBaseOperationUtil.bindIdAndStartNewActivity(view, R.id.bt_home_subset_inbound_arrival, ArrivalActivity.class);
-        ActivityBaseOperationUtil.bindIdAndStartNewActivity(view, R.id.bt_home_subset_inbound_measure, MeasureActivity.class);
-        ActivityBaseOperationUtil.bindIdAndStartNewActivity(view, R.id.bt_home_subset_inbound_qc, QcActivity.class);
-        ActivityBaseOperationUtil.bindIdAndStartNewActivity(view, R.id.bt_home_subset_inbound_stock_in, StockInActivity.class);
+        AppBaseOperationUtil.bindIdAndStartNewActivity(view, R.id.bt_home_subset_inbound_arrival, ArrivalActivity.class);
+        AppBaseOperationUtil.bindIdAndStartNewActivity(view, R.id.bt_home_subset_inbound_measure, MeasureActivity.class);
+        AppBaseOperationUtil.bindIdAndStartNewActivity(view, R.id.bt_home_subset_inbound_qc, QcActivity.class);
+        AppBaseOperationUtil.bindIdAndStartNewActivity(view, R.id.bt_home_subset_inbound_stock_in, StockInActivity.class);
 
         return view;
     }

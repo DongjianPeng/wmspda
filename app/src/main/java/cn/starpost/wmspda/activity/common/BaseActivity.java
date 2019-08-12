@@ -11,8 +11,11 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Toast;
 
+import cn.starpost.wmspda.R;
 import cn.starpost.wmspda.activity.home.HomeActivity;
 import cn.starpost.wmspda.service.app.ActivityLifeManager;
+import cn.starpost.wmspda.service.login.LoginService;
+import cn.starpost.wmspda.util.AppBaseOperationUtil;
 
 public abstract class BaseActivity extends AppCompatActivity implements View.OnClickListener {
     protected final String TAG = getClass().getName();
@@ -82,6 +85,9 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
     protected void onResume() {
         Log.d(TAG, "onResume: ");
         super.onResume();
+        if (getClass().getName().equals(HomeActivity.class.getName())) {
+            LoginService.checkLogin(this);
+        }
     }
 
     /**
@@ -201,5 +207,14 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
 
     @Override
     public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.rl_login_main_layout: {
+                AppBaseOperationUtil.hideSoftInputView(this);
+            }
+            break;
+
+            default:
+                break;
+        }
     }
 }

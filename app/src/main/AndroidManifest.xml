@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="cn.starpost.wmspda">
-
-    <!--访问系统的网络状态-->
+    <!-- 访问系统的网络状态 -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <!--监听开机广播-->
+    <!-- 监听开机广播 -->
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-
+    <!-- 开启网络权限-->
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".service.app.AppApplication"
@@ -17,6 +17,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".activity.login.LoginActivity"
+            android:theme="@style/Theme.AppCompat.Dialog"></activity>
+        <activity
             android:name=".activity.home.WelcomePage"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:launchMode="singleTask"
@@ -24,17 +27,19 @@
             android:theme="@style/welcome">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        LoginActivity
         <activity
             android:name=".activity.home.HomeActivity"
-            android:launchMode="singleTask"></activity>
+            android:launchMode="singleTask" />
         <activity android:name=".activity.setting.about.AboutActivity" />
         <activity
             android:name=".activity.common.DialogActivity"
             android:theme="@style/Theme.AppCompat.Dialog" />
-        <activity android:name=".activity.inbound.StockInActivity"></activity>
+        <activity android:name=".activity.inbound.StockInActivity" />
         <activity android:name=".activity.inbound.QcActivity" />
         <activity android:name=".activity.inbound.MeasureActivity" />
         <activity android:name=".activity.inbound.ArrivalActivity" />
