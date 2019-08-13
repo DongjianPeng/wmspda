@@ -18,6 +18,6 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         app:itemBackground="@android:color/white"
-        app:menu="@menu/bottom_tab" />
+        app:menu="@menu/home_bottom_tab" />
 
 </RelativeLayout>

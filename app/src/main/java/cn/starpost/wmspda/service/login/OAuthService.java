@@ -1,4 +1,4 @@
 package cn.starpost.wmspda.service.login;
 
-public class OAuthConfig {
+public class OAuthService {
 }

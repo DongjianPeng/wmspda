@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/me_setting_1"
+            android:icon="@mipmap/settings_white"
+            android:title="切换组织和仓库" />
+        <item
+            android:id="@+id/me_setting_3"
+            android:icon="@mipmap/settings_white"
+            android:title="个人中心" />
+        <item
+            android:id="@+id/me_setting_2"
+            android:icon="@mipmap/settings_white"
+            android:title="软件设置" />
+    </group>
+    <item android:title="其它设置">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@mipmap/settings_white"
+                android:title="检查更新" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@mipmap/settings_white"
+                android:title="关于" />
+        </menu>
+    </item>
+    <item
+        android:id="@+id/me_setting_version"
+        android:checkable="false"
+        android:enabled="false"
+        android:title="V1.0.0.0" />
+</menu>

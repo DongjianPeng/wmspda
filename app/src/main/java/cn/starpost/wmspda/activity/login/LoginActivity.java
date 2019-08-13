@@ -10,7 +10,6 @@ import android.widget.TextView;
 
 import cn.starpost.wmspda.R;
 import cn.starpost.wmspda.activity.common.BaseActivity;
-import cn.starpost.wmspda.config.AppConfig;
 import cn.starpost.wmspda.util.http.HTTPUtil;
 import cn.starpost.wmspda.util.http.HttpCallBackListener;
 import cn.starpost.wmspda.util.http.HttpResponse;
@@ -26,7 +25,7 @@ public class LoginActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login_activity);
+        setContentView(R.layout.login_login_activity);
 
 
         btnDoLogin = findViewById(R.id.bt_login_do_login);
@@ -83,7 +82,7 @@ public class LoginActivity extends BaseActivity {
                     public void httpCallBack(HttpResponse response) {
 
                     }
-                }).doPost(AppConfig.wmsUrl + "v2/pda/check-login", "ddd");
+                }).doGet("http://10.0.2.2:9000/auth/ck", "");
             }
             break;
 
